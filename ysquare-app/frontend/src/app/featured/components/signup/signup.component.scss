@@ -1,0 +1,55 @@
+@import "../../../../styles.scss";
+
+:host {
+  --bg-primary-color: var(--theme-primary);
+  --bg-royal-white-color: var(--theme-royal-white);
+  --bg-primary-blue: var(--theme-primary-blue);
+
+  .signup {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    .signup-left {
+      width: 50vw;
+      height: 100vh;
+      background: var(--theme-primary);
+    }
+    .signup-right {
+      width: 50vw;
+      height: 100vh;
+      padding: 10%;
+      .card-body {
+        .logo {
+          font-weight: bold;
+          color: var(--bg-primary-blue);
+        }
+        .signup-body {
+          padding: 15% 0%;
+          .signup-title {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Small Screens (Mobiles)
+
+@media (max-width: 768px) {
+    :host {
+        .signup {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            .signup-left {
+             display: none;
+            }
+            .signup-right {
+             display: block;
+             width: 100vw;
+            }
+        }
+    }
+}
+

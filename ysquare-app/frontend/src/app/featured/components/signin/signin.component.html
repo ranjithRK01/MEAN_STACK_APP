@@ -1,0 +1,48 @@
+<div class="signup">
+  <div class="signup-left vector-img">
+    <img
+      src="https://img.freepik.com/free-vector/computer-monitor-graphic-animator-creating-video-game-modeling-motion-processing-video-file-using-professional-editor-vector-illustration-graphic-design-art-designer-workplace-concept_74855-13038.jpg?size=626&ext=jpg&ga=GA1.2.2075113639.1618617600"
+      style="margin:7%"
+      alt="signup-img"
+      width="85%"
+      height="85%"
+    />
+  </div>
+  <div
+    class="card signup-right"
+  >
+    <div class="card-body">
+      <h3 class="logo">LOGO</h3>
+      <div class="signup-body">
+        <h3 class="signup-title">Welcome Back Please Login  Your Account</h3>
+        <form [formGroup]="signinForm" class="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Enter your email</label>
+        <input type="text" formControlName="email" class="form-control my-2 py-2" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+        </div>
+    </div>
+        <div class="form-group">
+            <label>Enter your password</label>
+            <input type="password" formControlName="password" class="form-control my-2 py-2" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+        </div>
+    <div class="text-center">
+        <button class="btn btn-primary m-4 px-4 py-2">Signin</button>
+    </div>
+    <div class="text-center">
+      <p>Don't have account ? click signup</p>
+      <button routerLink="/signup" class="btn btn-secondary m-4 px-4 py-2">Signup</button>
+  </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <p-toast position="top-center" key="tc"></p-toast> -->
+

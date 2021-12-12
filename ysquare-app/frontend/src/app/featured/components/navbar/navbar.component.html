@@ -1,0 +1,29 @@
+<style>
+  .list-item-active{
+       color: #fff;
+       font-size: 1.3rem;
+       font-weight:600;
+       border-bottom: 2px solid  #fff;
+   }
+</style>
+<header>
+	<nav class="navbar navbar-expand-sm navbar-light bg-primary px-10">
+		<h1  class="navbar-brand px-4" routerLink="/home" style="color:#fff;font-size:2rem;font-weight: 600;">ysquare</h1>
+		<div class="collapse navbar-collapse p-2" id="navbarSupportedContent"  style="margin: auto 5%;">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active" *ngIf="checkUserAccess == 'customer' || checkUserAccess == 'manager' ||  checkUserAccess == 'admin' ">
+					<a class="nav-link menu" routerLink="/customer" routerLinkActive="list-item-active" style="font-size: 1rem;color: rgba(248, 242, 242, 0.667);" href="#">Customer</a>
+				</li>
+				<li class="nav-item" *ngIf="checkUserAccess == 'manager' ||  checkUserAccess == 'admin'">
+					<a class="nav-link menu" routerLink="/manager" routerLinkActive="list-item-active" style="font-size: 1rem;color: rgba(248, 242, 242, 0.667);" href="#">Manager</a>
+				</li>
+        <li class="nav-item" *ngIf="checkUserAccess == 'admin'">
+					<a class="nav-link menu" routerLink="/admin" routerLinkActive="list-item-active" style="font-size: 1rem;color: rgba(248, 242, 242, 0.667);" href="#">Admin</a>
+				</li>
+			</ul>
+		</div>
+    <div *ngIf="checkUserIsLogin" class="logout-action">
+      <button class="btn-secondary mx-4 p-2" (click)="onLogout()">Logout</button>
+    </div>
+	</nav>
+</header>

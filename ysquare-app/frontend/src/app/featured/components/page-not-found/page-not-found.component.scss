@@ -1,0 +1,14 @@
+
+
+::ng-deep  .not-found {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+}
+
+
+::ng-deep .about button {
+  max-width: 100px;
+  margin-top: 30px;
+}

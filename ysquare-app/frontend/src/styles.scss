@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import '~@angular/material/theming';
+
+:root {
+    --theme-primary:linear-gradient(189.69deg, #3237D2 7.3%, #9D7AF7 105.65%);
+    --theme-royal:#E5E5E5;
+    --theme-royal-white:#ffff;
+    --theme-primary-blue:#3237D2 ;
+    --theme-secondary:linear-gradient(90deg, #FFFFFF -0.01%, #7B65EB 99.28%);
+    --theme-tab-active-background: linear-gradient(90deg, #7162FF 2.48%, #373AD4 89.67%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+  }
+  .mat-icon{
+    font-family: 'Material Icons' !important;
+  }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Montserrat', sans-serif; }
