@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const config = require("../../backend/src/env.json");
 
 //routes
 const authRoutes = require("./routes/auth");
@@ -35,5 +36,5 @@ app.use(cookieParser());
 app.use("/api", authRoutes);
 
 app.listen(process.env.PORT || 9005, () => {
-  console.log(`Server is running on port ${process.env.PORT}`);
+  console.log(`Server is running on port 9005`);
 });

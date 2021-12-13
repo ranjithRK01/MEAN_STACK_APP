@@ -1,9 +1,11 @@
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const config = require("../env.json");
 
 const generateJwtToken = (_id, role) => {
-  return jwt.sign({ _id, role },process.env.SECRET_KEY, {
+  let tokenTest = process.env.SECRET_KEY ? process.env.SECRET_KEY : config.SECRET_KEY;
+  return jwt.sign({ _id, role },tokenTest, {
     expiresIn: "1d",
   });
 };
